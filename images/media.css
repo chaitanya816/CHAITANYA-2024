@@ -1,0 +1,134 @@
+/* Media Queries */
+
+@media only screen and (width<1100px)
+{
+    .downloadbtn{
+        display: flex;
+    }
+    .downloadcv{
+        animation: none;
+    }
+    .skillOverviewBox {
+        width: 150px;
+        height: 150px;
+        box-shadow: 1px 1px 10px gray;
+        border-radius: 15px;
+        
+    }
+    .smallIconSkill{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    .smallskillName{
+        padding-top:25px ;
+        font-size: larger;
+    }
+    .container1{
+        margin-left: 250px;
+        margin-top: 250px;
+    }
+    .servicesItems{
+        width: 200px;
+        height: 200px;
+    }
+    .servicesHeading{
+        font-size: medium;
+        font-weight: 700;
+        margin-top: 5px;
+        padding: 0 5px 0 5px;
+    }
+    .servicesPara{
+        margin-top: 10px;
+        text-align: center; 
+        padding:0px 5px 0px 5px ;
+    }
+}
+
+@media only screen and (width<1050px)
+{
+    .skills{
+            margin-top: -350px;
+    }
+    .container1{
+        margin-top:-220px;
+        margin-left: 400px;
+    }
+}
+@media only screen and (width<450px)
+{
+    .downloadbtn{
+        display: block;
+        margin-left: -45px;
+    }
+   
+    .container1{
+       display: none;
+    }
+    .allprogressbar{
+        display: block;
+    }
+    .skillOverviewBox{
+        margin-top: 50px;
+    }
+    .servicesItems{
+        margin-top: 50px;
+    }
+    .content{
+        display: block;
+    }
+    .background-image-1 {
+        background-image: url(./images/potrait\ back\ less\ opacity.jpeg);
+    }
+    
+    .background-image-2 {
+        background-image: url(./images/potrait\ back1\ less\ opacity.png);
+    }
+
+    .conatctMe{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        margin-left: 0px;
+    }
+    input,textarea{
+        width: 90%;
+    }
+    .projectwork{
+        width: 80%;
+    }
+    .address{
+        display: none;
+    }
+    .submitbtn{
+        margin-left: 50px;
+    }
+    .topheading{
+        display: none;
+    }
+    .footer{
+        display: none;
+        /* width: 120%;
+         */
+    }
+    .topnav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100vw;
+        z-index: 1000;
+        background-color: var(--menBarcolor);
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        border-radius: 5px;
+    }
+    .intro{
+        font-size: 65px;
+    }
+    .softskilllink{
+        display: none;
+    }
+    .projectwork{
+        margin-left: 0;
+    }
+}

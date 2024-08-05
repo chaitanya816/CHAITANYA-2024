@@ -1,0 +1,1167 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--allovercolor);
+
+}
+
+body {
+    background-color: var(--maincolor);
+}
+
+/* Colors for light theme */
+
+body.dark{
+    --topmenucolor: rgb(210, 190, 190);
+    --menBarcolor: #f6eeee;
+    --menuFont: black;
+    --scrolBarColor: #8a9096;
+    --scrolBar: #a2b0b7;
+    --aboutColor: #FFF9D0;
+    --smallIconSkill1: rgb(0, 98, 255);
+    --smallIconSkill2: rgb(255, 153, 0);
+    --smallIconSkill3: rgb(111, 0, 255);
+    --smallIconSkill4: red;
+    --smallIconSkill1hover: rgb(239, 243, 249);
+    --smallIconSkill2hover: rgb(245, 240, 233);
+    --smallIconSkill3hover: rgb(234, 221, 250);
+    --smallIconSkill4hover: rgb(248, 230, 230);
+    --skilbarback: rgb(225, 220, 220);
+    --eduactionbackcolor: rgb(234, 243, 251);
+    --educationName: rgb(255, 254, 254);
+    --namecolor: black;
+    --mode-color: #ccc;
+    --menufootercolor: black;
+    --skilloverviewboxcolor: white;
+    --maincolor: white;
+    --headingAbout: black;
+    --servicesHeading: black;
+    --addressicon: white;
+    --smallskillName: black;
+    --allovercolor: black;
+    --menuicon: black;
+    --toptextcolor:rgb(255, 255, 255);
+    --footer:#f2f2f2;
+}
+
+/* Colors for Dark theme */
+
+:root{
+    --topmenucolor: rgb(4, 4, 4);
+    --menBarcolor: #2a2a2a;
+    --menuFont: white;
+    --scrolBarColor: #3a3f44;
+    --scrolBar: #5a6975;
+    --aboutColor: #333333;
+    --smallIconSkill1: rgb(107, 138, 186);
+    --smallIconSkill2: rgb(175, 164, 147);
+    --smallIconSkill3: rgb(179, 140, 234);
+    --smallIconSkill4: rgb(212, 114, 114);
+    --smallIconSkill1hover: rgb(117, 151, 205);
+    --smallIconSkill2hover: rgb(202, 167, 120);
+    --smallIconSkill3hover: rgb(167, 125, 230);
+    --smallIconSkill4hover: rgb(210, 118, 118);
+    --skilbarback: rgb(80, 80, 80);
+    --eduactionbackcolor: rgb(60, 70, 85);
+    --educationName: rgb(200, 200, 200);
+    --namecolor: white;
+    --mode-color: #333;
+    --menufootercolor: white;
+    --skilloverviewboxcolor: #2a2a2a;
+    --maincolor: #1a1a1a;
+    --headingAbout: white;
+    --servicesHeading: white;
+    --addressicon: black;
+    --smallskillName: white;
+    --allovercolor: white;
+    --menuicon: white;
+    --footer: #666666;
+    --toptextcolor:white;
+}
+
+/* TOP NAVBAR */
+
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--menBarcolor);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border-radius: 5px;
+}
+
+.toppic {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    background-color: black;
+}
+
+.topicon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggel {
+    margin-left: 25px;
+    position: absolute;
+}
+
+.topheading {
+    font-family: "Playwrite AR", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menuIcon {
+    width: 25px;
+    height: 25px;
+    margin-left: -215px;
+    font-size: 25px;
+    margin-top: -10px;
+}
+
+
+.menu-cross {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: -5px;
+}
+
+
+
+/* DARK MODE */
+.mode {
+    display: flex;
+    align-items: center;
+    margin-left: -150px;
+}
+
+.moon-sun {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: var(--mode-color);
+    margin-right: -5px;
+} 
+
+.moon-sun :is(#moon, #sun) {
+    position: absolute;
+    transition: 2s ease-in-out;
+}
+
+#sun {
+    opacity: 0;
+}
+
+body.dark #sun {
+    opacity: 1;
+}
+
+body.dark #moon {
+    opacity: 0;
+}
+
+.moon,
+.sun {
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+
+/* MenuBar */
+
+
+.menubar {
+    position: fixed;
+    top: 0;
+    left: -260px; 
+    overflow: auto;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--menBarcolor);
+    color: var(--menuFont);
+    transition: left 0.5s ease;
+    z-index: 1000; 
+  }
+  
+  .menubar.open {
+    left: 0;
+}
+
+.profilepic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 80px 25px 0px 25px;
+    background-color: white;
+}
+.menuitems,
+.menulinks {
+    padding: 1px;
+    text-align: center;
+    font-size: large;
+    color: var(--menuFont);
+    text-decoration: none;
+    list-style: none;
+}
+
+.menuitems:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.menulinks :active {
+    text-decoration: underline;
+
+}
+
+.name {
+    text-align: center;
+    padding: 25px;
+    font-size: 35px;
+    text-decoration: underline;
+    color: var(--namecolor);
+}
+
+.menubarFooter {
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 80px;
+    text-align: center;
+    color: rgb(171, 171, 171);
+}
+
+.menuBarfooterIcon {
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+.menuSocialLinks {
+    padding: 10px;
+    font-size: 25px;
+    color: var(--menufootercolor);
+}
+
+.menuSocialLinks :hover {
+    transform: scale(1.2);
+}
+/* MENU BAR END */
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrolBarColor);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrolBar);
+}
+
+
+/* Main */
+
+/* Main for each Section */
+.services,
+.skills,
+.education {
+    padding-bottom: 500px;
+    position: relative;
+    background-color: var(--maincolor);
+}
+.main{
+    padding-bottom: 150px;
+    position: relative;
+    background-color: var(--maincolor);
+}
+
+
+
+/* BACKGROUN IMAGE */
+.background-image-1 {
+    background-image: url(./images/less\ opacity.jpeg);
+}
+
+.background-image-2 {
+    background-image: url(./images/less\ opacity\ 2.png);
+
+}
+
+
+
+
+.intro {
+    justify-content: center;
+    padding-top: 250px;
+    font-size: 100px;
+    color: var(--toptextcolor);
+    padding-left: 25px;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.intro {
+    animation: move-up 1s ease-in-out;
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.intropara {
+    padding-left: 25px;
+
+    width: fit-content;
+    border-radius: 95px;
+    color: #f7f6f8;
+    padding-top: 15px;
+    font-weight: 500;
+    font-size: 35px;
+}
+
+
+
+.downloadcv {
+    margin-top: 75px;
+    margin-left: 75px;
+    width: 300px;
+    color: rgb(239, 239, 239);
+    animation: imgFloat 2s ease-in-out infinite;
+}
+
+@keyframes imgFloat {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+
+.about {
+    position: relative;
+    background-color: var(--maincolor);
+    /* margin-left: 260px; */
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+}
+
+.smallname {
+    margin-left: 25px;
+    color: gray;
+    font: smaller;
+    letter-spacing: 7px;
+    padding-top: 150px;
+
+}
+
+
+
+.headingAbout {
+    padding: 25px;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    width: fit-content;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--headingAbout);
+    letter-spacing: 5px;
+
+}
+
+.aboutPara {
+    padding: 25px;
+    letter-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-optical-sizing: auto;
+    width: fit-content;
+    font-style: normal;
+    font-weight: 500;
+    color: gray;
+    font-size: larger;
+
+}
+
+
+
+
+
+.aboutPara {
+    font-size: smaller;
+}
+
+.skillOverview {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+}
+
+.skillOverviewBox {
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 15px;
+    background-color: var(--skilloverviewboxcolor);
+
+}
+
+.skillOverviewBox {
+    text-align: center;
+}
+
+.smallIconSkill {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.smallskillName {
+    padding-top: 25px;
+    font-size: larger;
+    color: var(--smallskillName);
+}
+
+.skills {
+    padding: 50px;
+    /* margin-top: 2550px; */
+}
+
+
+.skillOverviewBox1 {
+    border-bottom: 4px solid var(--smallIconSkill1);
+
+}
+
+.skillOverviewBox2 {
+    border-bottom: 4px solid var(--smallIconSkill2);
+
+}
+
+.skillOverviewBox3 {
+    border-bottom: 4px solid var(--smallIconSkill3);
+
+}
+
+.skillOverviewBox4 {
+    border-bottom: 4px solid var(--smallIconSkill4);
+
+}
+
+
+
+.smallIconSkill1 {
+    color: var(--smallIconSkill1);
+}
+
+.smallIconSkill2 {
+    color: var(--smallIconSkill2);
+}
+
+.smallIconSkill3 {
+    color: var(--smallIconSkill3);
+}
+
+.smallIconSkill4 {
+    color: var(--smallIconSkill4);
+}
+
+
+
+
+.skillOverviewBox1:hover {
+    background-color: var(--smallIconSkill1hover);
+}
+
+.skillOverviewBox2:hover {
+    background-color: var(--smallIconSkill2hover);
+}
+
+.skillOverviewBox3:hover {
+    background-color: var(--smallIconSkill3hover);
+}
+
+.skillOverviewBox4:hover {
+    background-color: var(--smallIconSkill4hover);
+}
+
+.skillOverview {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+/* Services */
+
+
+
+.services {
+    margin-top: 200px;
+}
+
+.servicesContainer1,
+.servicesContainer2 {
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.servicesItems {
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 1px 10px grey;
+    border-radius: 15px;
+}
+
+.servicesIcon {
+    position: relative;
+    font-size: 35px;
+    left: 25%;
+    top: -15px;
+    width: 125px;
+    color: var(--servicesHeading);
+
+}
+
+.servicesHeading {
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 40px;
+    color: var(--servicesHeading);
+    padding: 0px 10px 0px 10px;
+}
+
+.servicesPara {
+    margin-top: 25px;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+    color: var(--servicesHeading);
+}
+
+.servicesItems1 {
+    border-bottom: 5px solid var(--smallIconSkill1);
+
+
+}
+
+.servicesItems2 {
+    border-bottom: 5px solid var(--smallIconSkill2);
+
+}
+
+.servicesItems3 {
+    border-bottom: 5px solid var(--smallIconSkill3);
+
+}
+
+.servicesItems4 {
+    border-bottom: 5px solid var(--smallIconSkill4);
+
+}
+
+.servicesItems5 {
+    border-bottom: 5px solid var(--smallIconSkill1);
+
+}
+
+.servicesItems6 {
+    border-bottom: 5px solid var(--smallIconSkill2);
+
+}
+
+.servicesContainerin1 :hover {
+    background-color: var(--smallIconSkill1hover);
+}
+
+.servicesContainerin2 :hover {
+    background-color: var(--smallIconSkill2hover);
+}
+
+.servicesContainerin3 :hover {
+    background-color: var(--smallIconSkill3hover);
+}
+
+.servicesContainerin4 :hover {
+    background-color: var(--smallIconSkill4hover);
+}
+
+.servicesContainerin5 :hover {
+    background-color: var(--smallIconSkill1hover);
+}
+
+.servicesContainerin6 :hover {
+    background-color: var(--smallIconSkill2hover);
+
+}
+
+
+
+/* SKILLS */
+
+.skills {
+    margin-top: -350px;
+    margin-bottom: 200px;
+}
+
+.skillpara {
+    padding: 30px;
+}
+
+.skillMesure {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* MY SKILL BAR */
+.out {
+    padding: 20px;
+}
+
+.progressbar {
+    width: 80%;
+    background-color: var(--skilbarback);
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 85px;
+
+
+}
+.content {
+    position: relative;
+    margin-left: 100%;
+    background-color: black;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+    color: aqua;
+    top: -45px;
+    display: none;
+}
+
+.skillset {
+    position: absolute;
+    margin-top: -30px;
+    font-size: 20px;
+}
+
+.skillicon {
+    position: absolute;
+    margin-top: -65px;
+    font-size: 35px;
+}
+
+.allprogressbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.progressline {
+
+    height: 8px;
+    border-radius: 5px;
+
+}
+
+
+.progressline1 {
+    background-color: var(--smallIconSkill1);
+    animation: animate-bar1 1s ease forwards;
+
+}
+
+.progressline2 {
+    background-color: var(--smallIconSkill2);
+    animation: animate-bar2 1s ease forwards;
+
+}
+
+.progressline3 {
+    background-color: var(--smallIconSkill3);
+    animation: animate-bar3 1s ease forwards;
+
+}
+
+.progressline4 {
+    background-color: var(--smallIconSkill4);
+    animation: animate-bar4 1s ease forwards;
+
+}
+
+.progressline5 {
+    background-color: var(--smallIconSkill1);
+    animation: animate-bar5 1s ease forwards;
+
+}
+
+.progressline6 {
+    background-color: var(--smallIconSkill3);
+    animation: animate-bar6 1s ease forwards;
+
+}
+.progressline1 .content {
+    color: var(--smallIconSkill1);
+    background-color: var(--skilbarback);
+}
+
+.progressline2 .content {
+    color: var(--smallIconSkill2);
+    background-color: var(--skilbarback);
+}
+
+.progressline3 .content {
+    color: var(--smallIconSkill3);
+    background-color: var(--skilbarback);
+}
+
+.progressline4 .content {
+    color: var(--smallIconSkill4);
+    background-color: var(--skilbarback);
+}
+
+.progressline5 .content {
+    color: var(--smallIconSkill1);
+    background-color: var(--skilbarback);
+}
+
+.progressline6 .content {
+    color: var(--smallIconSkill3);
+    background-color: var(--skilbarback);
+}
+
+.forbackcolor {
+    background-color: var(--maincolor);
+}
+
+
+
+
+@keyframes animate-bar1 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes animate-bar2 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes animate-bar3 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes animate-bar4 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes animate-bar5 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes animate-bar6 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+
+.animatebarback {
+    animation: animate-back 0.5s ease forwards;
+
+}
+
+@keyframes animate-back {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+
+/* My SKILL BAR end here */
+
+
+
+
+/* Radial Bar Skill */
+.container1 {
+    position: relative;
+    background-color: var(--maincolor);
+    margin-left: 500px;
+    width: 600px;
+    height: 500px;
+    top: 85px;
+}
+.skillheading{
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.radial-bar {
+
+    width: 50%;
+    height: 180px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 120px;
+    height: 160px;
+
+}
+
+.progress-bar {
+
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    /* stroke-dasharray: 502; */
+    /* stroke-dashoffset: 502; */
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: aqua;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 15;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 800;
+    animation: showText 0.5 1s linear forwards;
+    opacity: 0;
+}
+
+.text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+    animation: showText 0.5 1s linear forwards;
+    opacity: 0;
+    top: -10px;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.path-1 {
+    stroke: var(--smallIconSkill1);
+}
+
+.path-2 {
+    stroke: var(--smallIconSkill2);
+}
+
+.path-3 {
+    stroke: var(--smallIconSkill3);
+}
+
+.path-4 {
+    stroke: var(--smallIconSkill4);
+}
+
+
+/* RADIAL BAR SOFT SKILLS END HERE */
+
+
+
+/* Eduaction */
+
+.education {
+    margin-top: 150px;
+    padding: 50px;
+}
+
+.educationItems {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--educationName);
+
+}
+
+.educationDetails {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+    display: none;
+}
+
+/* WORK */
+.work {
+
+    margin-top: 150px;
+}
+
+.projectwork {
+    width: 35%;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-left: 125px;
+}
+
+
+
+
+
+/* contact me address */
+.address1,
+.address2,
+.address3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px;
+}
+
+.conatctMe {
+    display: flex;
+    gap: 100px;
+    margin-left: 250px;
+}
+
+.contact {
+    margin-top: 100px;
+    
+}
+
+.username,
+.Phone_No,
+.email,
+.textarea,
+.subject {
+    padding: 15px;
+    border-radius: 50px;
+}
+
+input,
+textarea {
+    width: 130%;
+    background-color: var(--eduactionbackcolor);
+    padding: 20px;
+    border: 0px;
+}
+
+::placeholder {
+    color: var(--placeholder);
+}
+
+.addressicon {
+
+    font-size: 45px;
+    padding: 20px;
+    background-color: var(--eduactionbackcolor);
+    margin: 15px;
+    height: 100px;
+    width: 90px;
+    color: rgb(79, 79, 218);
+    background-color: var(--addressicon);
+    border-radius: 5px;
+
+}
+
+.address2 {
+    margin-left: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.addrsslist {
+    list-style: none;
+}
+/* end */
+
+.lastline{
+    text-align: center;
+    font-size: medium;
+}
+footer {
+    background-color: var(--footer);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: -150px;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer-content a:hover {
+    color: #555;
+  }
+  
+  
