@@ -53,6 +53,30 @@
         margin-top:-220px;
         margin-left: 400px;
     }
+    .container1{
+        display: none;
+     }
+     .softskilllink{
+        display: none;
+    }
+    .conatctMe{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        margin-left: 150px;
+    }
+    input,textarea{
+        width: 150%;
+    }
+    .projectwork{
+        width: 80%;
+    }
+    .submitbtn{
+        margin-left: 150px;
+    }
+    .topheading{
+        margin: 0px 55px 0px 0px ;
+        font-size: 25px;
+    }
 }
 @media only screen and (width<450px)
 {

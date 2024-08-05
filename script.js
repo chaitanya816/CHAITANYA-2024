@@ -7,7 +7,7 @@ setInterval(() => {
   currentImage = currentImage === 1 ? 2 : 1;
   backgroundContainer.classList.remove(`background-image-${currentImage === 1 ? 2 : 1}`);
   backgroundContainer.classList.add(`background-image-${currentImage}`);
-}, 3000);
+}, 5000);
 
 
 introskill.style.display = 'block';
@@ -20,7 +20,7 @@ setInterval(() => {
     introskill.style.display = 'block';
     introname.style.display = 'none';
   }
-}, 3000);
+}, 5000);
 
 
 // Bar
