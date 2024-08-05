@@ -306,6 +306,7 @@ body.dark #moon {
     padding-bottom: 150px;
     position: relative;
     background-color: var(--maincolor);
+    background-repeat: no-repeat;
 }
 
 
