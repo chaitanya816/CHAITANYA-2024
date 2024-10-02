@@ -17,41 +17,6 @@ body {
 /* Colors for light theme */
 
 body.dark{
-    --topmenucolor: rgb(210, 190, 190);
-    --menBarcolor: #f6eeee;
-    --menuFont: black;
-    --scrolBarColor: #8a9096;
-    --scrolBar: #a2b0b7;
-    --aboutColor: #FFF9D0;
-    --smallIconSkill1: rgb(0, 98, 255);
-    --smallIconSkill2: rgb(255, 153, 0);
-    --smallIconSkill3: rgb(111, 0, 255);
-    --smallIconSkill4: red;
-    --smallIconSkill1hover: rgb(239, 243, 249);
-    --smallIconSkill2hover: rgb(245, 240, 233);
-    --smallIconSkill3hover: rgb(234, 221, 250);
-    --smallIconSkill4hover: rgb(248, 230, 230);
-    --skilbarback: rgb(225, 220, 220);
-    --eduactionbackcolor: rgb(234, 243, 251);
-    --educationName: rgb(255, 254, 254);
-    --namecolor: black;
-    --mode-color: #ccc;
-    --menufootercolor: black;
-    --skilloverviewboxcolor: white;
-    --maincolor: white;
-    --headingAbout: black;
-    --servicesHeading: black;
-    --addressicon: white;
-    --smallskillName: black;
-    --allovercolor: black;
-    --menuicon: black;
-    --toptextcolor:rgb(255, 255, 255);
-    --footer:#f2f2f2;
-}
-
-/* Colors for Dark theme */
-
-:root{
     --topmenucolor: rgb(4, 4, 4);
     --menBarcolor: #2a2a2a;
     --menuFont: white;
@@ -82,6 +47,41 @@ body.dark{
     --menuicon: white;
     --footer: #666666;
     --toptextcolor:white;
+}
+
+/* Colors for Dark theme */
+
+:root{
+    --topmenucolor: rgb(210, 190, 190);
+    --menBarcolor: #f6eeee;
+    --menuFont: black;
+    --scrolBarColor: #8a9096;
+    --scrolBar: #a2b0b7;
+    --aboutColor: #FFF9D0;
+    --smallIconSkill1: rgb(0, 98, 255);
+    --smallIconSkill2: rgb(255, 153, 0);
+    --smallIconSkill3: rgb(111, 0, 255);
+    --smallIconSkill4: red;
+    --smallIconSkill1hover: rgb(239, 243, 249);
+    --smallIconSkill2hover: rgb(245, 240, 233);
+    --smallIconSkill3hover: rgb(234, 221, 250);
+    --smallIconSkill4hover: rgb(248, 230, 230);
+    --skilbarback: rgb(225, 220, 220);
+    --eduactionbackcolor: rgb(234, 243, 251);
+    --educationName: rgb(255, 254, 254);
+    --namecolor: black;
+    --mode-color: #ccc;
+    --menufootercolor: black;
+    --skilloverviewboxcolor: white;
+    --maincolor: white;
+    --headingAbout: black;
+    --servicesHeading: black;
+    --addressicon: white;
+    --smallskillName: black;
+    --allovercolor: black;
+    --menuicon: black;
+    --toptextcolor:rgb(255, 255, 255);
+    --footer:#f2f2f2;
 }
 
 /* TOP NAVBAR */

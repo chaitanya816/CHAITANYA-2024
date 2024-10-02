@@ -156,3 +156,33 @@
         margin-left: 0;
     }
 }
+@media only screen and (width>=1000px)
+{
+    .menubar {
+        position: fixed;
+        top: 0;
+        left: 0px; 
+        overflow: auto;
+        width: 260px;
+        height: 100vh;
+        background-color: var(--menBarcolor);
+        color: var(--menuFont);
+        transition: left 0.5s ease;
+        z-index: 1000; 
+      }
+    .main,.services,.about,
+    .skills,
+    .education{
+        margin-left: 260px;
+    }
+   
+    .container1{
+        margin-left: 200px;
+    }
+    .contactMe{
+        margin: auto;
+    }
+    .menuIcon{
+        display: none;
+    }
+}
